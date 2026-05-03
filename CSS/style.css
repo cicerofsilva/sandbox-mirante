@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=Darker+Grotesque:wght@300..900&display=swap');
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* Impede o scroll lateral forçado */
+    margin: 0;
+    padding: 0;
+}
+
+.container,
+.container-fluid {
+    overflow: hidden;
+    /* Garante que as rows internas não vazem */
+}
+
+/* Título Principal (Hero) */
+h1,
+.h1,
+.display-1 {
+    color: var(--base-colors-gelo, #F8F9FA);
+    font-family: 'Poppins', sans-serif;
+    /* Mínimo 32px, escala com a largura da tela, máximo 64px */
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+/* Subtítulos de Seção */
+h2,
+.h2,
+.display-2 {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    /* Mínimo 28px, máximo 48px */
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.card-body h5 {
+    color: #FFFFFF;
+    font-family: 'Poppins';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    /* 48px */
+}
+
+/* Parágrafos Gerais */
+p {
+    color: #F8F9FA;
+    font-family: 'Poppins', sans-serif;
+    /* Mínimo 16px, máximo 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 200;
+    line-height: 1.2;
+}
+
+li a {
+    font-family: Cabin;
+    font-size: 16px;
+    font-weight: 400;
+    /* Regular */
+    line-height: 1.2;
+    /* 120% */
+    text-decoration: none;
+    /* Padrão de mercado para menus */
+    color: inherit;
+    /* Mantém a cor definida no pai ou específica */
+}
+
+span.about-span {
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 120%;
+}
+
+
+@media (max-width: 800px) {
+    section.hero-section {
+        /* No mobile, centralizamos mais a imagem para o texto não cobrir o rosto/detalhe principal */
+        background-position: 80% right;
+
+        .hero-text {
+            margin-top: auto;
+        }
+
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar-nav {
+        gap: 8px !important;
+        /* Reduz o espaço entre os links no mobile */
+        padding: 0 8px !important;
+        font-size: 14px;
+        /* Diminui um pouco a fonte se necessário */
+    }
+}
+
+/* --- Alinhamento do Hero --- */
+
+/* Padrão: Centralizado (para telas até 800px) */
+.hero-responsive-align {
+    text-align: center;
+    padding-top: 10rem;
+    /* Espaço para não cobrir a placa no mobile */
+}
+
+.hero-btn-container {
+    justify-content: center;
+}
+
+/* Desktop: À esquerda (de 801px até o tamanho máximo) */
+@media (min-width: 801px) {
+    .hero-responsive-align {
+        text-align: left;
+        padding-top: 15rem;
+        /* Ajuste para a placa na lateral no desktop */
+    }
+
+    .hero-btn-container {
+        justify-content: flex-start;
+    }
+}
+
+/* --- Botão Hambúrguer Sempre Fixo --- */
+.custom-toggler {
+    position: fixed !important;
+    top: 24px;
+    /* Distância do topo */
+    right: 24px;
+    /* Distância da direita */
+    z-index: 1100;
+    /* Garante que fique acima de tudo */
+    background-color: rgba(246, 189, 109, 0.9) !important;
+    border-radius: 12px;
+    padding: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+}
+
+
+
+
+/* --- Menu Hambúrguer Customizado (#03483D) --- */
+@media (max-width: 580px) {
+    .custom-toggler {
+        position: fixed;
+        top: 24px;
+        right: 24px;
+        z-index: 1100;
+        background-color: rgba(246, 189, 109, 0.9) !important;
+        border-radius: 12px;
+        padding: 8px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Ícone com 3 listras verdes #03483D */
+    .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3Base path fill='none' stroke='%2303483D' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
+
+
+
+
+
+/* 1. A partir de 800px (quando o texto centraliza), 
+      já mude a âncora para a placa (ex: 90%) */
+@media (max-width: 800px) {
+    section.hero-section {
+        background-size: cover !important;
+        /* Substitua 90% pelo valor que enquadra a sua placa */
+        background-position: 100% center !important;
+        transition: background-position 0.2s ease-in-out;
+        /* Suaviza variações */
+    }
+}
+
+/* 2. Em 550px, você MANTÉM os mesmos 90% */
+@media (max-width: 550px) {
+    section.hero-section {
+        /* Como a tela é estreita, os 90% vão centralizar a placa 
+           e o 'cover' vai cortar as rebarbas da esquerda e da direita */
+        background-position: 95% center !important;
+    }
+}
+
+
+
+
+
+@media (max-width: 800px) {
+
+    /* 1. Centralização do texto (Título, Span, Parágrafo) */
+    #about .about-text {
+        text-align: center !important;
+    }
+
+    /* 2. Centralização do Carrossel Grande */
+    #about .carousel {
+        margin-left: auto;
+        margin-right: auto;
+        /* Define uma largura máxima para não esticar demais em tablets */
+        max-width: 500px;
+    }
+
+    #about h5 {
+        margin-bottom: 8px;
+    }
+
+    /* 3. Espaçamento de 16px entre texto e imagens pequenas */
+    #about .about-text {
+        margin-bottom: 16px !important;
+        /* Padding-bottom adicional se preferir respiro interno */
+        padding-bottom: 0;
+    }
+
+    /* Ajuste para as thumbnails (mini carrossel) centralizarem na linha */
+    #about .carousel-mini-wrapper .row {
+        justify-content: center;
+    }
+}
+
+
+
+/* --- Estilo Pílula Desktop --- */
+.nav-mirante-pill {
+    background: rgba(246, 189, 109, 0.35);
+    backdrop-filter: blur(8px);
+    border-radius: 22px;
+    padding: 0 24px;
+    height: 48px;
+    align-items: center;
+}
+
+/* Gap de 22px exatos conforme solicitado */
+.gap-22px {
+    gap: 22px !important;
+}
+
+/* --- Mobile: Offcanvas e Toggler --- */
+@media (max-width: 575.98px) {
+    .custom-toggler {
+        position: fixed;
+        /* Mantém o botão acessível no scroll */
+        top: 24px;
+        /* Distância exata do topo */
+        right: 24px;
+        /* Distância exata da direita */
+        z-index: 1060;
+        /* Acima de outros elementos */
+        background: rgba(246, 189, 109, 0.8);
+        border-radius: 12px;
+        padding: 10px;
+        border: none;
+    }
+
+    /* Estilização interna do Offcanvas para alinhar com o Mirante */
+    .offcanvas {
+        background-color: #00473D !important;
+        /* Cor principal do projeto */
+        max-width: 70%;
+        /* Não ocupa a tela toda, visual mais elegante */
+    }
+}
+
+.mirante-menu {
+    /* Largura reduzida conforme solicitado */
+    width: 260px !important;
+
+    /* Verde #03483D com 70% de transparência (0.7) */
+    background: rgba(3, 72, 61, 0.7) !important;
+
+    /* Efeito de desfoque sutil no que está atrás do menu */
+    backdrop-filter: blur(6px);
+
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Garante que o header também não tenha fundo sólido herdado */
+.mirante-menu .offcanvas-header {
+    background: transparent !important;
+}
+
+section.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url(../img/fundo-placa.png);
+    background-size: cover;
+    background-position: top right;
+}
+
+section.about-section {
+    background: #006B5A;
+
+    & p {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 120%;
+        /* 19.2px */
+    }
+
+    ;
+
+    & h5 {
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        /* 48px */
+    }
+
+    ;
+
+    & h2 {
+        color: #FFF;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 200;
+        line-height: 1.2;
+        font-size: clamp(1.75rem, 5vw, 3rem);
+
+    }
+}
+
+section.services-section {
+    background: #F0EAD6;
+}
+
+section.local-section {
+    background: #D6F6E2;
+}
+
+.btn-cta {
+    display: flex;
+    padding: 16px 20px 16px 16px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 16px;
+    background: linear-gradient(93deg, rgba(0, 122, 104, 0.31) 0%, #00473D 100%);
+    border: none;
+    color: #F8F9FA;
+
+}
+
+.btn-cta:hover {
+    background: linear-gradient(93deg, rgba(0, 122, 104, 0.5) 100%, #002e27 0%);
+    color: #FFFFFF;
+    transform: translateY(-1px);
+
+    & a {
+        color: #F8F9FA;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        /* 20px */
+    }
+}
+
+.arrow img {
+    width: 40px;
+    animation: elevator 2.5s infinite ease-in-out;
+}
+
+@keyframes elevator {
+
+    0%,
+    100% {
+        /* Mantém a centralização do Bootstrap e a posição original no eixo Y */
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        /* Mantém a centralização e desce a seta em 15px */
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+
+.nav-item {
+    display: flex;
+    padding: 0 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+
+
+.card {
+    background-color: none;
+    border: none;
+}
+
+#carouselExampleAutoplaying {
+    /* O segredo da responsividade: */
+    width: 100%;
+    /* Ocupa tudo no celular */
+    max-width: 360px;
+    /* Trava em 360px no computador */
+
+    /* Alinhamento: */
+    margin-left: auto;
+    /* Empurra o slide para colar no texto (centro da tela) */
+    margin-right: 0;
+    /* Garante que ele não centralize na coluna se ela for larga */
+
+    border-radius: 24px;
+    overflow: hidden;
+    /* Garante que o slide não "fuja" da caixa */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    /* Deixa a altura ser proporcional à largura */
+    aspect-ratio: 360 / 550;
+    /* Mantém a proporção exata sem precisar fixar pixels */
+    object-fit: cover;
+}
+
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+    /* Garante suavidade */
+    will-change: transform;
+    /* Avisa o navegador para otimizar a animação */
+}
+
+/* :Carrossel Grande */
+.carousel-item img {
+    width: 100%;
+    max-width: 340px;
+    aspect-ratio: 360 / 550;
+    height: auto;
+    border-radius: 24px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: auto;
+}
+
+/* Imagem Pequenas */
+.about-mini-carrousel img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-text p {
+    width: 100%;
+}
+
+.btn-secondary button {
+    background-color: #007A68;
+    border: none;
+    border-radius: 24px;
+
+    &:hover {
+        background-color: #03483D;
+    }
+}
