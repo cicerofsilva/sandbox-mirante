@@ -93,31 +93,37 @@
 
             <!-- Removemos o gap da row para não quebrar a soma matemática de 100% da tela -->
             <!-- row com justify-content-center e colunas em 'auto' centraliza o bloco inteiro de forma absoluta -->
-            <div class="row justify-content-center align-items-stretch gy-5 gap-lg-3">
+            <div class="row justify-content-center align-items-stretch gy-2 gap-lg-3">
 
                 <!-- COLUNA IMAGEM GRANDE (Tamanho exato da imagem) -->
                 <div class="col-12 col-lg-auto d-flex justify-content-center px-0">
                     <!-- Adicionado style="width: 360px;" aqui para garantir que a coluna auto não esmague o carrossel -->
-                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="width: 100%; max-width: 360px;">
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"
+                        style="width: 100%; max-width: 600px;">
                         <div class="carousel-inner shadow">
                             <div class="carousel-item active">
                                 <img src="img/Carrossel.png" class="d-block w-100" alt="Mesa farta de café da manhã">
                             </div>
                             <div class="carousel-item">
-                                <img src="img/Slide-panoramica.jpg" class="d-block w-100" alt="Vista panorâmica da vegetação na Tijuca">
+                                <img src="img/Slide-panoramica.jpg" class="d-block w-100"
+                                    alt="Vista panorâmica da vegetação na Tijuca">
                             </div>
                             <div class="carousel-item">
-                                <img src="img/Slide_mesa1.jpg" class="d-block w-100" alt="Detalhe da mesa rústica preparada para refeição">
+                                <img src="img/Slide_mesa1.jpg" class="d-block w-100"
+                                    alt="Detalhe da mesa rústica preparada para refeição">
                             </div>
                             <div class="carousel-item">
-                                <img src="img/Slide_mesa2.jpg" class="d-block w-100" alt="Pratos e arranjos na mesa do restaurante">
+                                <img src="img/Slide_mesa2.jpg" class="d-block w-100"
+                                    alt="Pratos e arranjos na mesa do restaurante">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Anterior</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Próximo</span>
                         </button>
@@ -126,10 +132,11 @@
 
                 <!-- COLUNA TEXTO E CARROSSEL MINI (Tamanho exato do texto) -->
                 <div class="col-12 col-lg-auto d-flex justify-content-center px-0">
-                    
+
                     <!-- Adicionado width: 100% junto com o max-width: 500px para firmar a largura da coluna -->
-                    <div class="d-flex flex-column justify-content-between text-center text-lg-start h-100" style="width: 100%; max-width: 500px;">
-                        
+                    <div class="d-flex flex-column justify-content-between text-center text-lg-start h-100"
+                        style="width: 100%; max-width: 500px;">
+
                         <!-- Bloco Superior (Texto não encolhe) -->
                         <div class="flex-shrink-0">
                             <span class="about-span">Bem vindo ao Mirante</span>
@@ -146,7 +153,8 @@
                         <!-- Bloco Inferior (Wrapper das Imagens Menores) -->
                         <div class="carousel-mini-wrapper d-flex align-items-end mt-4">
                             <!-- gap-3 é o espaçamento entre as fotos pequenas -->
-                            <div class="d-flex gap-3 justify-content-center justify-content-lg-start align-items-end w-100 h-100">
+                            <div
+                                class="d-flex gap-3 justify-content-center justify-content-lg-start align-items-end w-100 h-100">
                                 <img class="mini-img shadow-sm" src="img/Carrossel1.svg" alt="Detalhe 1">
                                 <img class="mini-img shadow-sm" src="img/Carrossel4.jpg" alt="Detalhe 2">
                                 <img class="mini-img shadow-sm" src="img/Carrossel3.svg" alt="Detalhe 3">
@@ -160,7 +168,7 @@
             </div>
 
             <!-- Botão Secundário da Seção -->
-            <div class="d-flex justify-content-center mt-4">
+            <div class="d-flex justify-content-center my-3">
                 <a href="#services" class="btn btn-mirante px-4 py-2" role="button">Nossos Serviços</a>
             </div>
 
@@ -168,23 +176,22 @@
     </section>
 
     <!-- Serviços -->
-    <section id="services" class="services-section min-vh-100 py-3">
+    <section id="services" class="services-section min-vh-100 py-5">
         <div class="container mb-4">
             <!-- mb-5 garante que o H2 não receba colisão da imagem que sobe 95px -->
-            <h2 class="text-center mb-5">Serviços</h2>
+            <h2 class="text-center mb-3">Serviços</h2>
 
             <!-- mt-5 adicionado para respeitar a margem flutuante do card -->
-            <div class="row gy-5 justify-content-center gap-lg-2 mt-5">
+            <div class="row gy-5 justify-content-center gap-lg-2 mt-2">
                 <!-- Serviço 1 -->
                 <div class="col-12 col-md-6 col-lg-auto d-flex justify-content-center">
-                    <div class="card service-card border-0">
+                    <div class="card service-card border-0 px-1">
                         <img src="img/service-plate1.svg" class="service-img" alt="Café da Manhã">
                         <div class="card-body d-flex flex-column align-items-center text-center">
                             <h5 class="card-title">Café da Manhã</h5>
-                            <p class="card-text mb-4">
-                                Uma mesa farta para você se sentir em casa. Desfrute do nosso buffet livre com pães
-                                frescos, sucos, bolos, tapiocas e sobremesas afetivas como rabanada e banoffe.
-                            </p>
+                            <p class="card-text mb-4 ">
+                                Buffet livre: pães, bolos, ovos e sucos à vontade. Uma mesa farta com sobremesas
+                                caseiras e nossa famosa banoffe para você começar o dia da melhor forma. </p>
                             <button type="button" class="btn btn-service mt-auto">Reservar</button>
                         </div>
                     </div>

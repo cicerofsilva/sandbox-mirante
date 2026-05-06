@@ -42,6 +42,7 @@ h2,
     font-size: clamp(2.5rem, 5vw, 3rem);
     font-weight: 200;
     line-height: 1.2;
+    margin-top: 1rem;
 }
 
 section.about-section h3.card-title {
@@ -214,7 +215,7 @@ span.about-span {
 
 /* SERVIÇOS */
 section.services-section {
-    background: linear-gradient(rgba(240, 234, 214, 0.6), rgba(240, 234, 214, 0.6)), url("../img/services-background1.png") no-repeat center / cover, #F0EAD6;
+    background: url("../img/fundo-terraco-meiacor.png") no-repeat left / cover, #F0EAD6;
 }
 
 section.services-section h2 {
@@ -227,23 +228,23 @@ section.services-section h2 {
     width: 100%;
     max-width: 260px;
     border-radius: 12px;
-    padding-top: 105px;
+    padding-top: 110px;
     margin-top: 95px;
     position: relative;
-    box-shadow: 0 1px 9.1px 0 rgba(0, 0, 0, 0.10) inset;
+    box-shadow: 0 1px 9.1px 0 rgba(0, 0, 0, 0.244) inset;
 }
 
 /* Imagem Flutuante Circular */
 .service-img {
     position: absolute;
-    top: -95px;
+    top: -110px;
     left: 50%;
     transform: translateX(-50%);
-    width: 190px;
-    height: 190px;
+    width: 210px;
+    height: 210px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.315);
     z-index: 2;
 }
 
@@ -252,6 +253,7 @@ section.services-section h2 {
     padding: 0 16px 24px 16px;
 }
 
+/* Titulo do card (h5) */
 .service-card .card-title {
     color: #F8F9FA;
     font-family: 'Poppins', sans-serif;
@@ -260,11 +262,15 @@ section.services-section h2 {
     margin-bottom: 12px;
 }
 
+/* Texto do Card (p) */
 .service-card .card-text {
     color: #FFF;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.3;
+    /* Distribui o espaço entre palavras, não letras */
 }
 
 /* Modificador de Tema do Card (Refatorado do #card-2) */
@@ -282,7 +288,7 @@ section.services-section h2 {
 
 /* Botão Serviços Base */
 .btn-service {
-    background-color: #C68656;
+    background-color: #cc722d;
     color: #F8F9FA;
     border: none;
     border-radius: 24px;
@@ -290,10 +296,12 @@ section.services-section h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     transition: 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.088);
+
 }
 
 .btn-service:hover {
-    background-color: #A36B42;
+    background-color: #be5e19;
     color: #FFF;
 }
 
@@ -317,7 +325,7 @@ section.local-section {
 
 /* O ELO PERDIDO: O item do carrossel precisa herdar a altura do molde */
 #carouselExampleAutoplaying .carousel-item {
-    height: 100%; 
+    height: 100%;
 }
 
 /* Agora a imagem obedece ao tamanho do item, e o "cover" recorta a sobra */
@@ -325,7 +333,8 @@ section.local-section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center; /* Garante que o recorte foque no meio da foto */
+    object-position: center;
+    /* Garante que o recorte foque no meio da foto */
 }
 
 /* --- AJUSTE DAS IMAGENS PEQUENAS --- */
@@ -333,21 +342,30 @@ section.local-section {
     flex-grow: 1;
     min-height: 0;
     display: flex;
-    align-items: flex-end; /* Garante que ficam coladas ao fundo da foto grande */
+    align-items: flex-end;
+    /* Garante que ficam coladas ao fundo da foto grande */
 }
 
 
 
 .mini-img {
-    flex: 1; /* Divide o espaço livre igualmente entre as 3 imagens */
-    width: 100%; /* Comando para expandir horizontalmente... */
-    max-width: 170px; /* ...mas o freio de mão puxa exatamente nos 170px */
-    height: 100%; /* Comando para expandir verticalmente... */
-    max-height: 220px; /* ...mas o freio de mão puxa nos 220px (nível do fundo) */
-    aspect-ratio: 61/93; /* Mantém a matemática do seu Figma */
-    object-fit: cover; /* A mágica acontece aqui: se a caixa ficar de um tamanho diferente da proporção original da foto, ele dá "zoom" e recorta as sobras sem amassar os pixels */
+    flex: 1;
+    /* Divide o espaço livre igualmente entre as 3 imagens */
+    width: 100%;
+    /* Comando para expandir horizontalmente... */
+    max-width: 170px;
+    /* ...mas o freio de mão puxa exatamente nos 170px */
+    height: 100%;
+    /* Comando para expandir verticalmente... */
+    max-height: 220px;
+    /* ...mas o freio de mão puxa nos 220px (nível do fundo) */
+    aspect-ratio: 61/93;
+    /* Mantém a matemática do seu Figma */
+    object-fit: cover;
+    /* A mágica acontece aqui: se a caixa ficar de um tamanho diferente da proporção original da foto, ele dá "zoom" e recorta as sobras sem amassar os pixels */
     border-radius: 12px;
 }
+
 /* ==========================================================================
    8. MEDIA QUERIES (RESPONSIVIDADE GERAL)
    ========================================================================== */
@@ -365,7 +383,7 @@ section.local-section {
 }
 
 /* --- Tablets e Mobile (Até 800px) --- */
-@media (max-width: 800px) {
+@media (max-width: 990px) {
 
     /* Hero */
     section.hero-section {
@@ -376,6 +394,38 @@ section.local-section {
 
     section.hero-section .hero-text {
         margin-top: auto;
+    }
+
+    /* --- CONFIGURAÇÃO DA IMAGEM GRANDE NO MOBILE --- */
+    #carouselExampleAutoplaying {
+        /* 1. Aumente aqui a largura máxima. */
+        /* Se quiser que ocupe quase a tela toda, use 90% ou um valor como 600px */
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    #carouselExampleAutoplaying .carousel-inner {
+        border-radius: 24px;
+        width: 100%;
+
+        /* 2. Mude a proporção para ele ganhar altura. */
+        /* 1/1 deixará ele quadrado (maior). */
+        /* 4/3 deixará ele um retângulo mais alto. */
+        aspect-ratio: 2 / 1;
+
+        /* 3. Aumente ou remova o max-height para não travar o crescimento */
+        max-width: 900px;
+    }
+
+    /* Garante que a imagem preencha o novo espaço maior */
+    #carouselExampleAutoplaying .carousel-item {
+        height: 100%;
+    }
+
+    #carouselExampleAutoplaying .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
