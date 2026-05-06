@@ -84,74 +84,74 @@
     </section>
 
     <!-- Sobre Nós -->
-    <section id="about" class="about-section min-vh-100 d-flex flex-column justify-content-center py-3">
+    <section id="about" class="about-section min-vh-100 d-flex flex-column justify-content-center py-5">
         <div class="container px-4">
 
             <div class="text-center pb-4">
                 <h2>Sobre Nós</h2>
             </div>
 
-            <!-- gap-lg-3 define os exatos 16px. align-items-stretch força as colunas a terem a mesma altura -->
-            <div class="row justify-content-center align-items-stretch gy-5 gap-lg-3">
+            <!-- Removemos o gap da row para não quebrar a soma matemática de 100% da tela -->
+            <div class="row justify-content-center align-items-stretch gy-5">
 
-                <!-- COLUNA IMAGEM GRANDE -->
-                <!-- px-lg-0 tira o padding no desktop para a fresta de 16px funcionar -->
-                <div class="col-12 col-lg-auto d-flex justify-content-center justify-content-lg-end px-lg-0">
+                <!-- COLUNA IMAGEM GRANDE (Exatos 50%) -->
+                <!-- pe-lg-2 cria 8px de respiro na direita. -->
+                <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end pe-lg-2">
                     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner shadow">
                             <div class="carousel-item active">
                                 <img src="img/Carrossel.png" class="d-block w-100" alt="Mesa farta de café da manhã">
                             </div>
                             <div class="carousel-item">
-                                <img src="img/Slide-panoramica.jpg" class="d-block w-100"
-                                    alt="Vista panorâmica da vegetação na Tijuca">
+                                <img src="img/Slide-panoramica.jpg" class="d-block w-100" alt="Vista panorâmica da vegetação na Tijuca">
                             </div>
                             <div class="carousel-item">
-                                <img src="img/Slide_mesa1.jpg" class="d-block w-100"
-                                    alt="Detalhe da mesa rústica preparada para refeição">
+                                <img src="img/Slide_mesa1.jpg" class="d-block w-100" alt="Detalhe da mesa rústica preparada para refeição">
                             </div>
                             <div class="carousel-item">
-                                <img src="img/Slide_mesa2.jpg" class="d-block w-100"
-                                    alt="Pratos e arranjos na mesa do restaurante">
+                                <img src="img/Slide_mesa2.jpg" class="d-block w-100" alt="Pratos e arranjos na mesa do restaurante">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                            data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Anterior</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                            data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Próximo</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- COLUNA TEXTO E CARROSSEL MINI -->
-                <!-- ps-lg-0 alinha a parede esquerda com a fresta de 16px -->
-                <div class="col-12 col-lg-5 d-flex flex-column text-center text-lg-start ps-lg-0">
-
-                    <!-- Bloco Superior (Texto não encolhe) -->
-                    <div class="flex-shrink-0">
-                        <span class="about-span">Bem vindo ao Mirante</span>
-                        <h3 class="card-title mt-0">Um espaço acolhedor no coração da cidade</h3>
-                        <p class="card-text mt-2">
-                            Descubra um oásis de tranquilidade escondido na agitação urbana. Aqui, a
-                            arquitetura rústica se mistura com a Mata Atlântica para criar uma atmosfera
-                            única de paz e renovação. Seja para ler um livro, meditar ou apenas contemplar a
-                            vista, nosso espaço foi desenhado para abraçar você e proporcionar momentos de
-                            pura desconexão e bem-estar.
-                        </p>
-                    </div>
-
-                    <!-- Bloco Inferior (Wrapper das Imagens Menores) -->
-                    <div class="carousel-mini-wrapper d-flex align-items-end ">
-                        <div class="d-flex gap-3 justify-content-center justify-content-lg-start align-items-end w-100 h-100">
-                            <img class="mini-img shadow-sm" src="img/Carrossel1.svg" alt="Detalhe 1">
-                            <img class="mini-img shadow-sm" src="img/Carrossel4.jpg" alt="Detalhe 2">
-                            <img class="mini-img shadow-sm" src="img/Carrossel3.svg" alt="Detalhe 3">
+                <!-- COLUNA TEXTO E CARROSSEL MINI (Exatos 50%) -->
+                <!-- ps-lg-2 cria 8px de respiro na esquerda. 8px + 8px = Os exatos 16px de fresta no meio da tela -->
+                <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start ps-lg-2">
+                    
+                    <!-- Envolvemos o conteúdo em uma div de 500px para o texto não ficar excessivamente esticado em telas ultrawide -->
+                    <div class="d-flex flex-column justify-content-between text-center text-lg-start h-100 w-100" style="max-width: 500px;">
+                        
+                        <!-- Bloco Superior (Texto não encolhe) -->
+                        <div class="flex-shrink-0">
+                            <span class="about-span">Bem vindo ao Mirante</span>
+                            <h3 class="card-title mt-0">Um espaço acolhedor no coração da cidade</h3>
+                            <p class="card-text mt-2">
+                                Descubra um oásis de tranquilidade escondido na agitação urbana. Aqui, a
+                                arquitetura rústica se mistura com a Mata Atlântica para criar uma atmosfera
+                                única de paz e renovação. Seja para ler um livro, meditar ou apenas contemplar a
+                                vista, nosso espaço foi desenhado para abraçar você e proporcionar momentos de
+                                pura desconexão e bem-estar.
+                            </p>
                         </div>
+
+                        <!-- Bloco Inferior (Wrapper das Imagens Menores) -->
+                        <div class="carousel-mini-wrapper d-flex align-items-end mt-4">
+                            <div class="d-flex gap-3 justify-content-center justify-content-lg-start align-items-end w-100 h-100">
+                                <img class="mini-img shadow-sm" src="img/Carrossel1.svg" alt="Detalhe 1">
+                                <img class="mini-img shadow-sm" src="img/Carrossel4.jpg" alt="Detalhe 2">
+                                <img class="mini-img shadow-sm" src="img/Carrossel3.svg" alt="Detalhe 3">
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
@@ -159,7 +159,7 @@
             </div>
 
             <!-- Botão Secundário da Seção -->
-            <div class="d-flex justify-content-center mt-4">
+            <div class="d-flex justify-content-center mt-5">
                 <a href="#services" class="btn btn-mirante px-4 py-2" role="button">Nossos Serviços</a>
             </div>
 
