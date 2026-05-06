@@ -13,6 +13,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 .container,
@@ -151,7 +152,8 @@ p {
     position: fixed !important;
     top: 24px;
     right: 24px;
-    z-index: 1040; /* <--- Fica acima do site, mas abaixo do Modal (1055) */
+    z-index: 1040;
+    /* <--- Fica acima do site, mas abaixo do Modal (1055) */
     background-color: #006b59b7 !important;
     border-radius: 12px;
     padding: 10px;
@@ -365,14 +367,26 @@ section.local-section p {
     font-weight: 300;
 }
 
-/* Botão do local */
+/* Botão da Localização */
 section.local-section button {
-    background: #007A68;
+    background: #005244;
 }
 
-/* Botão com :Hover */
+/* Botão da Localização com :Hover */
 section.local-section button:hover {
-    background: #03483D;
+    background: #015b4c;
+}
+
+/* Botão Whatsapp */
+section.local-section .btn-whatsapp {
+    background: #1ec45b;
+    color: #03483D;
+}
+
+/* Botão Whatsapp com :Hover */
+section.local-section .btn-whatsapp:hover {
+    background: #18a34b;
+    color: #03483D;
 }
 
 /* Textinho com Endereço */
@@ -410,47 +424,41 @@ section.local-section span {
 }
 
 
-/* Ajuste para mobile: reduzir a altura total para caber melhor na tela */
-@media (max-width: 990px) {
-    .map-clipping-wrapper {
-        height: 450px;
-    }
 
-    .map-clipping-wrapper iframe {
-        top: -160px;
-        /* No mobile a barra do Google costuma ser um pouco maior */
-        height: 700px;
-    }
-}
 
 
 /* ==========================================================================
    7. CARROSSEIS E IMAGENS GERAIS (SOBRE NÓS)
    ========================================================================== */
 
+/* Aqui fica a responsabilidade de sobrepor a esteira pequena */
+#carouselExampleAutoplaying {
+    position: relative;
+    z-index: 2;
+}
+
 /* --- O MOLDE DA IMAGEM GRANDE --- */
 #carouselExampleAutoplaying .carousel-inner {
     border-radius: 24px;
     width: 100%;
-    z-index: 2;
-    max-width: 360px;
-    max-height: 600px;
-    aspect-ratio: 360 / 600;
+    /* REMOVIDO: z-index: 2 (Libera o clique nos botões) */
+    /* REMOVIDO: max-width: 360px (Deixe o HTML de 600px controlar a largura) */
+
+    max-height: 500px;
+    aspect-ratio: 320 / 500;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* O ELO PERDIDO: O item do carrossel precisa herdar a altura do molde */
+/* Herança de altura e recorte perfeito */
 #carouselExampleAutoplaying .carousel-item {
     height: 100%;
 }
 
-/* Agora a imagem obedece ao tamanho do item, e o "cover" recorta a sobra */
 #carouselExampleAutoplaying .carousel-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    /* Garante que o recorte foque no meio da foto */
 }
 
 /* --- AJUSTE DAS IMAGENS PEQUENAS --- */
@@ -486,7 +494,7 @@ section.local-section span {
 
 .mini-img {
     flex-shrink: 0;
-    width: 160px;
+    width: 140px;
     height: auto;
     border-radius: 12px;
     /* 0 (x) 6px (y) 12px (blur) */
@@ -532,12 +540,14 @@ section.local-section span {
         /* Se quiser que ocupe quase a tela toda, use 90% ou um valor como 600px */
         max-width: 900px;
         margin: 0 auto;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     #carouselExampleAutoplaying .carousel-inner {
         border-radius: 24px;
         width: 100%;
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 3/ 4;
         max-width: 900px;
     }
 
@@ -564,8 +574,21 @@ section.local-section span {
         z-index: 1;
     }
 
+
     /* Localização */
 
+    /* Ajuste para mobile: reduzir a altura total para caber melhor na tela */
+    @media (max-width: 990px) {
+        .map-clipping-wrapper {
+            height: 450px;
+        }
+
+        .map-clipping-wrapper iframe {
+            top: -160px;
+            /* No mobile a barra do Google costuma ser um pouco maior */
+            height: 700px;
+        }
+    }
 }
 
 /* <-- CORREÇÃO AQUI: Faltava fechar o @media (max-width: 990px) */
