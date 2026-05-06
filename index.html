@@ -84,20 +84,21 @@
     </section>
 
     <!-- Sobre Nós -->
-    <section id="about" class="about-section min-vh-100 d-flex flex-column justify-content-center py-5">
+    <section id="about" class="about-section min-vh-100 d-flex flex-column justify-content-center py-0">
         <div class="container px-4">
 
-            <div class="text-center pb-4">
+            <div class="text-center pb-3">
                 <h2>Sobre Nós</h2>
             </div>
 
             <!-- Removemos o gap da row para não quebrar a soma matemática de 100% da tela -->
-            <div class="row justify-content-center align-items-stretch gy-5">
+            <!-- row com justify-content-center e colunas em 'auto' centraliza o bloco inteiro de forma absoluta -->
+            <div class="row justify-content-center align-items-stretch gy-5 gap-lg-3">
 
-                <!-- COLUNA IMAGEM GRANDE (Exatos 50%) -->
-                <!-- pe-lg-2 cria 8px de respiro na direita. -->
-                <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end pe-lg-2">
-                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <!-- COLUNA IMAGEM GRANDE (Tamanho exato da imagem) -->
+                <div class="col-12 col-lg-auto d-flex justify-content-center px-0">
+                    <!-- Adicionado style="width: 360px;" aqui para garantir que a coluna auto não esmague o carrossel -->
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="width: 100%; max-width: 360px;">
                         <div class="carousel-inner shadow">
                             <div class="carousel-item active">
                                 <img src="img/Carrossel.png" class="d-block w-100" alt="Mesa farta de café da manhã">
@@ -123,12 +124,11 @@
                     </div>
                 </div>
 
-                <!-- COLUNA TEXTO E CARROSSEL MINI (Exatos 50%) -->
-                <!-- ps-lg-2 cria 8px de respiro na esquerda. 8px + 8px = Os exatos 16px de fresta no meio da tela -->
-                <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start ps-lg-2">
+                <!-- COLUNA TEXTO E CARROSSEL MINI (Tamanho exato do texto) -->
+                <div class="col-12 col-lg-auto d-flex justify-content-center px-0">
                     
-                    <!-- Envolvemos o conteúdo em uma div de 500px para o texto não ficar excessivamente esticado em telas ultrawide -->
-                    <div class="d-flex flex-column justify-content-between text-center text-lg-start h-100 w-100" style="max-width: 500px;">
+                    <!-- Adicionado width: 100% junto com o max-width: 500px para firmar a largura da coluna -->
+                    <div class="d-flex flex-column justify-content-between text-center text-lg-start h-100" style="width: 100%; max-width: 500px;">
                         
                         <!-- Bloco Superior (Texto não encolhe) -->
                         <div class="flex-shrink-0">
@@ -145,6 +145,7 @@
 
                         <!-- Bloco Inferior (Wrapper das Imagens Menores) -->
                         <div class="carousel-mini-wrapper d-flex align-items-end mt-4">
+                            <!-- gap-3 é o espaçamento entre as fotos pequenas -->
                             <div class="d-flex gap-3 justify-content-center justify-content-lg-start align-items-end w-100 h-100">
                                 <img class="mini-img shadow-sm" src="img/Carrossel1.svg" alt="Detalhe 1">
                                 <img class="mini-img shadow-sm" src="img/Carrossel4.jpg" alt="Detalhe 2">
@@ -159,7 +160,7 @@
             </div>
 
             <!-- Botão Secundário da Seção -->
-            <div class="d-flex justify-content-center mt-5">
+            <div class="d-flex justify-content-center mt-4">
                 <a href="#services" class="btn btn-mirante px-4 py-2" role="button">Nossos Serviços</a>
             </div>
 
