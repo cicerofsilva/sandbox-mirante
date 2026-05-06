@@ -113,9 +113,12 @@ p {
 }
 
 @keyframes elevator {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(10px);
     }
@@ -303,9 +306,81 @@ section.services-section h2 {
 }
 
 /* LOCALIZAÇÃO */
+
+/* Fundo da Seção */
 section.local-section {
-    background: #D6F6E2;
+    background: #006B5A;
 }
+
+/* Título da Seção (h2) */
+section.local-section h2 {
+    color: #fafffe;
+}
+
+/* Texto da Seção (p) */
+section.local-section p {
+    color: #ffffff;
+    font-weight: 300;
+}
+
+/* Botão do local */
+section.local-section button {
+    background: #007A68;
+}
+
+/* Botão com :Hover */
+section.local-section button:hover {
+    background: #03483D;
+}
+
+/* Textinho com Endereço */
+section.local-section span {
+    color: #F8F9FA;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 120%;
+text-align: center;
+}
+
+/* Cortar mapa para sumir Titulos */
+.map-clipping-wrapper {
+    width: 100%;
+    height: 550px;
+    /* Esta é a altura real que o mapa terá na sua tela */
+    overflow: hidden;
+    /* Esconde tudo o que vazar desta altura */
+    border-radius: 24px;
+    /* Mantém a identidade visual dos seus outros cards */
+    position: relative;
+    background-color: #f0f0f0;
+    /* Cor de fundo caso o mapa demore a carregar */
+}
+
+.map-clipping-wrapper iframe {
+    position: absolute;
+    /* Puxamos o iframe para cima para esconder o cabeçalho do Google */
+    top: -150px;
+    left: 0;
+    /* Aumentamos a altura para compensar o deslocamento acima e não faltar mapa embaixo */
+    height: 800px;
+    width: 100%;
+}
+
+
+/* Ajuste para mobile: reduzir a altura total para caber melhor na tela */
+@media (max-width: 990px) {
+    .map-clipping-wrapper {
+        height: 450px;
+    }
+
+    .map-clipping-wrapper iframe {
+        top: -160px;
+        /* No mobile a barra do Google costuma ser um pouco maior */
+        height: 700px;
+    }
+}
+
 
 /* ==========================================================================
    7. CARROSSEIS E IMAGENS GERAIS (SOBRE NÓS)
@@ -393,6 +468,7 @@ section.local-section {
         margin-top: auto;
     }
 
+    /* Sobre Nós */
     /* --- CONFIGURAÇÃO DA IMAGEM GRANDE NO MOBILE --- */
     #carouselExampleAutoplaying {
         /* 1. Aumente aqui a largura máxima. */
@@ -424,6 +500,14 @@ section.local-section {
         height: 100%;
         object-fit: cover;
     }
+
+    .service-card .card-body {
+        padding: 0 8px 24px 8px;
+    }
+
+    /* Localização */
+
+
 }
 
 /* --- Mobile Menu / Telas Pequenas (Até 580px) --- */
