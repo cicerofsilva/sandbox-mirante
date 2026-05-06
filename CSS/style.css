@@ -113,14 +113,11 @@ p {
 }
 
 @keyframes elevator {
-
-    0%,
-    100% {
-        transform: translateX(-50%) translateY(0);
+    0%, 100% {
+        transform: translateY(0);
     }
-
     50% {
-        transform: translateX(-50%) translateY(10px);
+        transform: translateY(10px);
     }
 }
 
@@ -215,7 +212,7 @@ span.about-span {
 
 /* SERVIÇOS */
 section.services-section {
-    background: url("../img/fundo-terraco-meiacor.png") no-repeat left / cover, #F0EAD6;
+    background: url("../img/fundo-terraco-meiacor.png") no-repeat center / cover, #F0EAD6;
 }
 
 section.services-section h2 {
