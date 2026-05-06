@@ -60,15 +60,6 @@ p {
     line-height: 1.2;
 }
 
-li a {
-    font-family: 'Cabin', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.2;
-    text-decoration: none;
-    color: inherit;
-}
-
 /* ==========================================================================
    4. COMPONENTES REUTILIZÁVEIS
    ========================================================================== */
@@ -144,16 +135,14 @@ li a {
     align-items: center;
 }
 
-.nav-item {
-    display: flex;
-    padding: 0 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 22px;
-}
-
-.gap-22px {
-    gap: 22px !important;
+.nav-link {
+    color: #FEFFFE;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+    gap: 20px;
 }
 
 .custom-toggler {
@@ -242,8 +231,6 @@ section.services-section h2 {
     margin-top: 95px;
     position: relative;
     box-shadow: 0 1px 9.1px 0 rgba(0, 0, 0, 0.10) inset;
-
-
 }
 
 /* Imagem Flutuante Circular */
@@ -280,19 +267,20 @@ section.services-section h2 {
     font-weight: 300;
 }
 
-#card-2 {
+/* Modificador de Tema do Card (Refatorado do #card-2) */
+.card-theme-green {
     background: #006B5A;
 }
 
-#card-2 button {
+.card-theme-green .btn-service {
     background: #007A68;
-
-    &:hover {
-        background: #03483D;
-    }
 }
 
-/* Botão Serviços */
+.card-theme-green .btn-service:hover {
+    background: #03483D;
+}
+
+/* Botão Serviços Base */
 .btn-service {
     background-color: #C68656;
     color: #F8F9FA;
@@ -315,41 +303,51 @@ section.local-section {
 }
 
 /* ==========================================================================
-   7. CARROSSEIS E IMAGENS GERAIS
+   7. CARROSSEIS E IMAGENS GERAIS (SOBRE NÓS)
    ========================================================================== */
-#carouselExampleAutoplaying {
+
+/* --- O MOLDE DA IMAGEM GRANDE --- */
+#carouselExampleAutoplaying .carousel-inner {
+    border-radius: 24px;
     width: 100%;
     max-width: 360px;
-    margin-left: auto;
-    margin-right: 0;
-    border-radius: 24px;
-    overflow: hidden;
-}
-
-.carousel-item {
-    transition: transform 0.6s ease-in-out;
-    will-change: transform;
-}
-
-.carousel-item img {
-    width: 100%;
-    max-width: 340px;
-    height: auto;
+    max-height: 500px;
     aspect-ratio: 360 / 550;
-    border-radius: 24px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    margin: auto;
 }
 
-.about-mini-carrousel img {
+/* O ELO PERDIDO: O item do carrossel precisa herdar a altura do molde */
+#carouselExampleAutoplaying .carousel-item {
+    height: 100%; 
+}
+
+/* Agora a imagem obedece ao tamanho do item, e o "cover" recorta a sobra */
+#carouselExampleAutoplaying .carousel-item img {
     width: 100%;
-    height: 550px;
+    height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center; /* Garante que o recorte foque no meio da foto */
 }
 
+/* --- AJUSTE DAS IMAGENS PEQUENAS --- */
+.carousel-mini-wrapper {
+    flex-grow: 1;
+    min-height: 0;
+    display: flex;
+    align-items: flex-end; /* Garante que ficam coladas ao fundo da foto grande */
+}
+
+
+
+.mini-img {
+    flex: 1; /* Divide o espaço livre igualmente entre as 3 imagens */
+    width: 100%; /* Comando para expandir horizontalmente... */
+    max-width: 170px; /* ...mas o freio de mão puxa exatamente nos 170px */
+    height: 100%; /* Comando para expandir verticalmente... */
+    max-height: 220px; /* ...mas o freio de mão puxa nos 220px (nível do fundo) */
+    aspect-ratio: 61/93; /* Mantém a matemática do seu Figma */
+    object-fit: cover; /* A mágica acontece aqui: se a caixa ficar de um tamanho diferente da proporção original da foto, ele dá "zoom" e recorta as sobras sem amassar os pixels */
+    border-radius: 12px;
+}
 /* ==========================================================================
    8. MEDIA QUERIES (RESPONSIVIDADE GERAL)
    ========================================================================== */
@@ -378,23 +376,6 @@ section.local-section {
 
     section.hero-section .hero-text {
         margin-top: auto;
-    }
-
-    /* Sobre Nós */
-    #about .about-text {
-        text-align: center !important;
-        margin-bottom: 16px !important;
-        padding-bottom: 0;
-    }
-
-    #about .carousel {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 500px;
-    }
-
-    #about .carousel-mini-wrapper .row {
-        justify-content: center;
     }
 }
 
