@@ -1,0 +1,16 @@
+name: Comprimir Imagens Automaticamente
+on:
+  push:
+    branches:
+      - main # Muda para o nome da sua branch principal (ex: master), se for diferente
+jobs:
+  otimizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código do repositório
+        uses: actions/checkout@v4
+
+      - name: Otimizar Imagens
+        uses: calibreapp/image-actions@main
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
