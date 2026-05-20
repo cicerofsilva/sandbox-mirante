@@ -465,9 +465,7 @@
                             </div>
                         </div>
 
-                        <!-- Lado TEXTO EVENTOS -->
                         <div class="col-12 col-lg-6 d-flex flex-column justify-content-between p-4 py-lg-5 mx-auto">
-
                             <div class="w-100">
                                 <h3 class="modal-title text-center mb-3">Faça seu evento</h3>
 
@@ -492,14 +490,69 @@
                                 </div>
                             </div>
 
-                            <a href="https://wa.me/5521988998818" target="_blank"
-                                class="btn btn-service w-100 py-3 fw-bold shadow-sm mt-3"
+                            <button class="btn btn-service w-100 py-3 fw-bold shadow-sm mt-3"
+                                data-bs-target="#modalReservaEvento"
+                                data-bs-toggle="modal"
                                 style="background-color: #006B5A; color: white; border-radius: 24px; font-family: 'Poppins', sans-serif;">
                                 Faça um Orçamento
-                            </a>
+                            </button>
                         </div>
 
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modalReservaEvento" tabindex="-1" aria-labelledby="modalReservaEventoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title pt-1 text-center" id="modalReservaEventoLabel">Orçamento de Eventos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-0 m-0" style="min-height: 600px;">
+                    <script src="//widget.simplybook.me/v2/widget/widget.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                        var widget = new SimplybookWidget({
+                            "widget_type": "iframe",
+                            "url": "https:\/\/mirantedafloresta.simplybook.me",
+                            "theme": "creative",
+                            "theme_settings": {
+                                "timeline_show_end_time": "0",
+                                "timeline_modern_display": "as_slots", /* Voltou para o padrão do café */
+                                "timeline_hide_unavailable": "1",
+                                "index_page_content_grid": "[{\"template\":\"col_25_50_25\",\"items\":[null,null,null]}]",
+                                "hide_past_days": "0",
+                                "sb_base_color": "#006B5A", /* Ajustado para o verde do Mirante */
+                                "display_item_mode": "block",
+                                "booking_nav_bg_color": "#006b5a",
+                                "body_bg_color": "#ffffff",
+                                "sb_review_image": "",
+                                "dark_font_color": "#040846",
+                                "light_font_color": "#ffffff",
+                                "btn_color_1": "#ffffff",
+                                "hide_img_mode": "0",
+                                "show_sidebar": "1",
+                                "sb_busy": "#c7b3b3",
+                                "sb_available": "#17a18c"
+                            },
+                            "timeline": "modern", /* Voltou para o padrão do café */
+                            "datepicker": "top_calendar", /* Voltou para o padrão do café */
+                            "is_rtl": false,
+                            "app_config": {
+                                "clear_session": 1,
+                                "allow_switch_to_ada": 0,
+                                "predefined": {
+                                    "provider": "2",
+                                    "service": "14" /* Alterado estritamente para o ID 14 de Eventos */
+                                }
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </div>
