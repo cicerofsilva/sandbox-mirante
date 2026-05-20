@@ -242,7 +242,7 @@ section.about-section p {
 span.about-span {
     color: #F8F9FA;
     font-family: 'Poppins', sans-serif;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 200;
     line-height: 120%;
 }
@@ -348,6 +348,24 @@ section.services-section h2 {
     line-height: 120%;
     text-align: center;
 }
+
+/* DIAS FUNCIONAMENTO MODAL */
+p.modal-days {
+    font-size: clamp(1.2rem, 0.9vw, 1rem) !important;
+    ;
+}
+
+
+/* Asteríscos */
+.pricing-info p.little-text {
+    font-family: 'Poppins', sans-serif !important;
+    ;
+    font-size: clamp(0.85rem, 0.9vw, 0.1rem) !important;
+    ;
+    font-weight: 400 !important;
+    ;
+}
+
 
 /* LOCALIZAÇÃO */
 
@@ -574,6 +592,18 @@ section.local-section span {
         z-index: 1;
     }
 
+    /* Serviços */
+    #modalDetalhesEvento .btn-close {
+        filter: invert(1);
+
+        opacity: 1;
+    }
+
+    #modalDetalhesCafe .btn-close {
+        filter: invert(1);
+
+        opacity: 1;
+    }
 
     /* Localização */
 
@@ -601,4 +631,64 @@ section.local-section span {
     section.hero-section {
         background-position: 95% center !important;
     }
+}
+
+
+
+/* ==========================================================================
+   9. EDIÇÃO DE MODAL (RESPONSIVIDADE GERAL)
+   ========================================================================== */
+
+/* MODAL CAFÉ DA MANHÃ */
+#modalDetalhesCafe .modal-content {
+    background: #f7ece4;
+
+    /* Título do Modal */
+    & h3 {
+        color: #006B5A;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        line-height: 1.2;
+        font-size: clamp(1.75rem, 3vw, 2.5rem);
+    }
+
+    /* Paragrafo do Modal */
+    & p {
+        color: #000000;
+        font-size: clamp(1.1rem, 1vw, 1.1rem);
+    }
+}
+
+/* Modal Evento */
+#modalDetalhesEvento .modal-content {
+    background: #f7ece4;
+
+    /* Título do Modal */
+    & h3 {
+        color: #006B5A;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        line-height: 1.2;
+        font-size: clamp(1.75rem, 3vw, 2.5rem);
+    }
+
+    /* Paragrafo do Modal */
+    & p {
+        color: #000000;
+        font-size: clamp(1.1rem, 1vw, 1.1rem);
+    }
+
+}
+
+
+
+
+/* Imagem G rande */
+.carousel-item img {
+    border-radius: 0.7rem;
+}
+
+/* Interior do Slide */
+.carousel-inner {
+    border-radius: 0.7rem;
 }
