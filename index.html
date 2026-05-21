@@ -423,136 +423,143 @@
 
     <!-- MODAL EVENTOS -->
     <div class="modal fade" id="modalDetalhesEvento" tabindex="-1" aria-labelledby="modalDetalhesEventoLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content" style="border-radius: 24px; overflow: hidden; border: none;">
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 24px; overflow: hidden; border: none;">
 
-            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
-                aria-label="Close" style="z-index: 10;"></button>
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
+                    aria-label="Close" style="z-index: 10;"></button>
 
-            <div class="modal-body">
-                <div class="row g-0">
+                <div class="modal-body">
+                    <div class="row g-0">
 
-                    <div class="col-12 col-lg-5 auto p-0 mb-2">
-                        <div id="carrosselModalEvento" class="carousel slide h-100" data-bs-ride="carousel">
-                            <div class="carousel-inner h-100">
-                                <div class="carousel-item active h-100">
-                                    <img src="img/about-slide-1.webp" class="d-block w-100 h-100 object-fit-cover" alt="Espaço Mirante da Floresta" style="min-height: 400px;">
+                        <div class="col-12 col-lg-5 auto p-0 mb-2">
+                            <div id="carrosselModalEvento" class="carousel slide h-100" data-bs-ride="carousel">
+                                <div class="carousel-inner h-100">
+                                    <div class="carousel-item active h-100">
+                                        <img src="img/about-slide-1.webp" class="d-block w-100 h-100 object-fit-cover"
+                                            alt="Espaço Mirante da Floresta" style="min-height: 400px;">
+                                    </div>
+                                    <div class="carousel-item h-100">
+                                        <img src="img/about-slide-3.webp" class="d-block w-100 h-100 object-fit-cover"
+                                            alt="Detalhes do Buffet" style="min-height: 400px;">
+                                    </div>
+                                    <div class="carousel-item h-100">
+                                        <img src="img/modal-eventos-circle.webp"
+                                            class="d-block w-100 h-100 object-fit-cover" alt="Mesa de Eventos"
+                                            style="min-height: 400px;">
+                                    </div>
+                                    <div class="carousel-item h-100">
+                                        <img src="img/Slide_mesa2.jpg" class="d-block w-100 h-100 object-fit-cover"
+                                            alt="Cenário Integrado à Natureza" style="min-height: 400px;">
+                                    </div>
                                 </div>
-                                <div class="carousel-item h-100">
-                                    <img src="img/about-slide-3.webp" class="d-block w-100 h-100 object-fit-cover" alt="Detalhes do Buffet" style="min-height: 400px;">
-                                </div>
-                                <div class="carousel-item h-100">
-                                    <img src="img/modal-eventos-circle.webp" class="d-block w-100 h-100 object-fit-cover" alt="Mesa de Eventos" style="min-height: 400px;">
-                                </div>
-                                <div class="carousel-item h-100">
-                                    <img src="img/Slide_mesa2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Cenário Integrado à Natureza" style="min-height: 400px;">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carrosselModalEvento" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carrosselModalEvento" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-6 d-flex flex-column justify-content-between p-4 py-lg-5 mx-auto">
-                        <div class="w-100">
-                            <h3 class="modal-title text-center mb-3">Faça seu evento</h3>
-
-                            <p class="mb-4 text-center">
-                                Celebre seus momentos mais especiais em um refúgio exclusivo integrado à Mata
-                                Atlântica, na Tijuca. Oferecemos o cenário ideal para quem busca privacidade,
-                                gastronomia e aconchego.
-                            </p>
-
-                            <div class="pricing-info mb-4 text-center">
-                                <p class="mb-2">
-                                    <b>Ideal para:</b> Casamentos intimistas (Mini-Weddings), aniversários, almoços
-                                    especiais e eventos corporativos.
-                                </p>
-                                <p class="mb-2">
-                                    <b>Capacidade:</b> Até 50 pessoas sentadas confortavelmente.
-                                </p>
-                                <p class="mb-0">
-                                    <b>Formato:</b> Locação do espaço com opções de menus personalizados e decoração
-                                    assinados pelo Chef Rodrigo.
-                                </p>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carrosselModalEvento" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carrosselModalEvento" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </button>
                             </div>
                         </div>
 
-                        <button class="btn btn-service w-100 py-3 fw-bold shadow-sm mt-3"
-                            data-bs-target="#modalReservaEvento"
-                            data-bs-toggle="modal"
-                            style="background-color: #006B5A; color: white; border-radius: 24px; font-family: 'Poppins', sans-serif;">
-                            Faça um Orçamento
-                        </button>
-                    </div>
+                        <div class="col-12 col-lg-6 d-flex flex-column justify-content-between p-4 py-lg-5 mx-auto">
+                            <div class="w-100">
+                                <h3 class="modal-title text-center mb-3">Faça seu evento</h3>
 
+                                <p class="mb-4 text-center">
+                                    Celebre seus momentos mais especiais em um refúgio exclusivo integrado à Mata
+                                    Atlântica, na Tijuca. Oferecemos o cenário ideal para quem busca privacidade,
+                                    gastronomia e aconchego.
+                                </p>
+
+                                <div class="pricing-info mb-4 text-center">
+                                    <p class="mb-2">
+                                        <b>Ideal para:</b> Casamentos intimistas (Mini-Weddings), aniversários, almoços
+                                        especiais e eventos corporativos.
+                                    </p>
+                                    <p class="mb-2">
+                                        <b>Capacidade:</b> Até 50 pessoas sentadas confortavelmente.
+                                    </p>
+                                    <p class="mb-0">
+                                        <b>Formato:</b> Locação do espaço com opções de menus personalizados e decoração
+                                        assinados pelo Chef Rodrigo.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-service w-100 py-3 fw-bold shadow-sm mt-3"
+                                data-bs-target="#modalReservaEvento"
+                                data-bs-toggle="modal"
+                                style="background-color: #006B5A; color: white; border-radius: 24px; font-family: 'Poppins', sans-serif;">
+                                Faça um Orçamento
+                            </button>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
-<div class="modal fade" id="modalReservaEvento" tabindex="-1" aria-labelledby="modalReservaEventoLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header border-0 pb-0">
-                <h5 class="modal-title pt-1 text-center" id="modalReservaEventoLabel">Orçamento de Eventos</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
+    <div class="modal fade" id="modalReservaEvento" tabindex="-1" aria-labelledby="modalReservaEventoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title pt-1 text-center" id="modalReservaEventoLabel">Orçamento de Eventos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
 
-            <div class="modal-body p-0 m-0" style="min-height: 600px;">
-                <script src="//widget.simplybook.me/v2/widget/widget.js" type="text/javascript"></script>
-                <script type="text/javascript">
-                    var widget = new SimplybookWidget({ 
-                        "widget_type": "iframe", 
-                        "url": "https:\/\/mirantedafloresta.simplybook.me", 
-                        "theme": "creative", 
-                        "theme_settings": { 
-                            "timeline_show_end_time": "0", 
-                            "timeline_modern_display": "as_slots", /* Voltou para o padrão do café */
-                            "timeline_hide_unavailable": "1", 
-                            "index_page_content_grid": "[{\"template\":\"col_25_50_25\",\"items\":[null,null,null]}]", 
-                            "hide_past_days": "0", 
-                            "sb_base_color": "#006B5A", /* Ajustado para o verde do Mirante */
-                            "display_item_mode": "block", 
-                            "booking_nav_bg_color": "#006b5a", 
-                            "body_bg_color": "#ffffff", 
-                            "sb_review_image": "", 
-                            "dark_font_color": "#040846", 
-                            "light_font_color": "#ffffff", 
-                            "btn_color_1": "#ffffff", 
-                            "hide_img_mode": "0", 
-                            "show_sidebar": "1", 
-                            "sb_busy": "#c7b3b3", 
-                            "sb_available": "#17a18c" 
-                        }, 
-                        "timeline": "modern", /* Voltou para o padrão do café */
-                        "datepicker": "top_calendar", /* Voltou para o padrão do café */
-                        "is_rtl": false, 
-                        "app_config": { 
-                            "clear_session": 1, 
-                            "allow_switch_to_ada": 0, 
-                            "predefined": { 
-                                "provider": "2", 
-                                "service": "14" /* Alterado estritamente para o ID 14 de Eventos */
-                            } 
-                        } 
-                    });
-                </script>
+                <div class="modal-body p-0 m-0" style="min-height: 600px;">
+                    <script src="//widget.simplybook.me/v2/widget/widget.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                        var widget = new SimplybookWidget({
+                            "widget_type": "iframe",
+                            "url": "https:\/\/mirantedafloresta.simplybook.me",
+                            "theme": "creative",
+                            "theme_settings": {
+                                "timeline_show_end_time": "0",
+                                "timeline_modern_display": "as_slots", /* Voltou para o padrão do café */
+                                "timeline_hide_unavailable": "1",
+                                "index_page_content_grid": "[{\"template\":\"col_25_50_25\",\"items\":[null,null,null]}]",
+                                "hide_past_days": "0",
+                                "sb_base_color": "#006B5A", /* Ajustado para o verde do Mirante */
+                                "display_item_mode": "block",
+                                "booking_nav_bg_color": "#006b5a",
+                                "body_bg_color": "#ffffff",
+                                "sb_review_image": "",
+                                "dark_font_color": "#040846",
+                                "light_font_color": "#ffffff",
+                                "btn_color_1": "#ffffff",
+                                "hide_img_mode": "0",
+                                "show_sidebar": "1",
+                                "sb_busy": "#c7b3b3",
+                                "sb_available": "#17a18c"
+                            },
+                            "timeline": "modern", /* Voltou para o padrão do café */
+                            "datepicker": "top_calendar", /* Voltou para o padrão do café */
+                            "is_rtl": false,
+                            "app_config": {
+                                "clear_session": 1,
+                                "allow_switch_to_ada": 0,
+                                "predefined": {
+                                    "provider": "2",
+                                    "service": "14" /* Alterado estritamente para o ID 14 de Eventos */
+                                }
+                            }
+                        });
+                    </script>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
-    
+
 
     <!-- LightBox do Site -->
     <div class="modal fade" id="modalLightboxGlobal" tabindex="-1" aria-hidden="true"
