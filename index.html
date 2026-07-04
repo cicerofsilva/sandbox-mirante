@@ -204,25 +204,26 @@
                     </div>
                 </div>
 
-                <!-- Serviço 2 
-                DESATIVADO
+                <!-- Serviço 2 -->
                 <div class="col-12 col-md-6 col-lg-auto d-flex justify-content-center">
-<div class="card service-card card-theme-green border-0">
-                        <img src="img/services-card-2.jpg" class="service-img" alt="Almoço">
+                    <div class="card service-card  border-0 px-1">
+                        <img src="img/icon-1.wenp.webp" class="service-img" alt="Café da Manhã">
                         <div class="card-body d-flex flex-column align-items-center text-center">
-                            <h5 class="card-title">Brunch</h5>
-                            <p class="card-text mb-4">
-                                A união perfeita para o seu dia. Nosso tradicional café da manhã acompanhado de uma
-                                seleção especial de saladas, sanduíches e tortas salgadas para saborear sem pressa.
-                            </p>
-                            <button type="button" class="btn btn-service mt-auto">Reservar</button>
+                            <h5 class="card-title px-0"> Brunch e Almoço</h5>
+                            <p class="card-text mb-4 ">
+                                Para pausar o dia e desacelerar. Nosso almoço combina o aconchego de um brunch com um
+                                buffet dinâmico, perfeito para saborear sem pressa com vista para a Tijuca </p>
+                            <button type="button" class="btn btn-service mt-auto" data-bs-toggle="modal"
+                                data-bs-target="#modalDetalhesAlmoco">
+                                Saiba Mais
+                            </button>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- Serviço 3 -->
                 <div class="col-12 col-md-6 col-lg-auto d-flex justify-content-center">
-                    <div class="card service-card border-0">
+                    <div class="card service-card card-theme-green border-0">
                         <img src="img/modal-eventos-circle.webp" class="service-img" alt="Eventos">
                         <div class="card-body d-flex flex-column align-items-center text-center">
                             <h5 class="card-title">Eventos</h5>
@@ -383,8 +384,8 @@
                                     R$ 80,00 <span class="fs-6 fw-normal text-muted">/ pessoa</span>
                                 </p>
                                 <p class="little-text text-muted mb-0">
-                                    * Crianças de 6 a 10 anos: R$ 40,00 (50% do valor).<br>
-                                    * Crianças de até 5 anos: Cortesia.
+                                    * Formato: Buffet livre com suco de laranja, café e leite inclusos <br>
+                                    * Crianças de 6 a 11 anos: R$ 40,00 (50% do valor).
                                 </p>
                             </div>
 
@@ -421,6 +422,114 @@
                     <script src="//widget.simplybook.me/v2/widget/widget.js" type="text/javascript"></script>
                     <script type="text/javascript">
                         var widget = new SimplybookWidget({ "widget_type": "iframe", "url": "https:\/\/mirantedafloresta.simplybook.me", "theme": "creative", "theme_settings": { "timeline_show_end_time": "0", "timeline_modern_display": "as_slots", "timeline_hide_unavailable": "1", "index_page_content_grid": "[{\"template\":\"col_25_50_25\",\"items\":[null,null,null]}]", "hide_past_days": "0", "sb_base_color": "#11806f", "display_item_mode": "block", "booking_nav_bg_color": "#006b5a", "body_bg_color": "#ffffff", "sb_review_image": "", "dark_font_color": "#040846", "light_font_color": "#ffffff", "btn_color_1": "#ffffff", "hide_img_mode": "0", "show_sidebar": "1", "sb_busy": "#c7b3b3", "sb_available": "#17a18c" }, "timeline": "modern", "datepicker": "top_calendar", "is_rtl": false, "app_config": { "clear_session": 1, "allow_switch_to_ada": 0, "predefined": { "provider": "2", "service": "1" } } });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- MODAL B: ALMOÇO E BRUNCH (DETALHES)        -->
+    <!-- ========================================== -->
+    <div class="modal fade" id="modalDetalhesAlmoco" tabindex="-1" aria-labelledby="modalDetalhesAlmocoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 24px; overflow: hidden; border: none;">
+
+                <!-- Botão de Fechar flutuante -->
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
+                    aria-label="Close" style="z-index: 10;"></button>
+
+                <div class="modal-body">
+                    <div class="row g-0">
+
+                        <!-- ALMOÇO - ESQUERDA: Carrossel de Imagens -->
+                        <div class="col-12 col-lg-5 p-0 mb-2">
+                            <div id="carrosselModalAlmoco" class="carousel slide h-100" data-bs-ride="carousel">
+                                <div class="carousel-inner h-100">
+                                    <div class="carousel-item active h-100">
+                                        <img src="img/modal-cafe-2.webp" class="d-block w-100 h-100 object-fit-cover"
+                                            alt="Mesa de Almoço" style="min-height: 400px;">
+                                    </div>
+                                    <div class="carousel-item h-100">
+                                        <img src="img/services-plates-card2.jpg"
+                                            class="d-block w-100 h-100 object-fit-cover mw-300" alt="Cardápio Almoço"
+                                            style="max-height: 500px;">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carrosselModalAlmoco" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carrosselModalAlmoco" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- DIREITA: Informações e Ação -->
+                        <div class="col-12 col-lg-6 d-flex flex-column justify-content-center p-0 mx-auto">
+                            <h3 class="modal-title text-center mb-1" id="modalDetalhesAlmocoLabel">Buffet: Brunch e
+                                Almoço</h3>
+
+                            <div class="mb-4">
+                                <h6 class="text-center mb-0"><i class="bi bi-clock"></i> Horário de Serviço</h6>
+                                <p class="modal-days text-muted small mb-0 text-center">Sábados, Domingos e Feriados |
+                                    13h às 15h</p>
+                            </div>
+
+                            <p class="mb-4 text-start">
+                                Desfrute de uma tarde gastronômica única em meio à natureza da Tijuca. Nosso
+                                Brunch/Almoço conta com um menu sazonal livre, combinando pratos quentes sofisticados,
+                                preparações artesanais e sobremesas assinadas pelo Chef da casa.
+                            </p>
+
+                            <p class="small text-danger mb-4 fw-light text-center">
+                                * Recomendamos fortemente a reserva antecipada para garantir o seu lugar.
+                            </p>
+
+                            <div class="pricing-info mb-4 text-start">
+                                <p class="mb-1 fw-bold fs-5" style="color: #006B5A;">
+                                    R$ 80,00 <span class="fs-6 fw-normal text-muted">/ pessoa</span>
+                                </p>
+                                <p class="little-text text-muted mb-0">
+                                    * Buffet livre. Bebidas e itens adicionais são vendidos à parte.<br>
+                                    * Crianças de 6 a 11 anos: R$ 40,00 (50% do valor).<br>
+                                    * Crianças até 5 anos: Cortesia.
+                                </p>
+                            </div>
+
+                            <!-- Botão que abre o modal do SimplyBook do Almoço -->
+                            <button class="btn btn-service w-100 py-3 fw-bold shadow-sm"
+                                data-bs-target="#modalReservaAlmoco" data-bs-toggle="modal"
+                                style="background-color: #006B5A; color: white; border-radius: 24px; font-family: 'Poppins', sans-serif;">
+                                Fazer Reserva Agora
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MODAL RESERVA: SIMPLYBOOK ALMOÇO           -->
+    <!-- ========================================== -->
+    <div class="modal fade" id="modalReservaAlmoco" tabindex="-1" aria-labelledby="modalReservaAlmocoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title pt-1 text-center" id="modalReservaAlmocoLabel">Reserva: Brunch e Almoço</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 m-0" style="min-height: 600px;">
+                    <script src="//widget.simplybook.me/v2/widget/widget.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                        var widget = new SimplybookWidget({ "widget_type": "iframe", "url": "https:\/\/mirantedafloresta.simplybook.me", "theme": "creative", "theme_settings": { "timeline_show_end_time": "0", "timeline_modern_display": "as_slots", "timeline_hide_unavailable": "1", "index_page_content_grid": "[{\"template\":\"col_25_50_25\",\"items\":[null,null,null]}]", "hide_past_days": "0", "sb_base_color": "#11806f", "display_item_mode": "block", "booking_nav_bg_color": "#006b5a", "body_bg_color": "#ffffff", "sb_review_image": "", "dark_font_color": "#040846", "light_font_color": "#ffffff", "btn_color_1": "#215268", "hide_img_mode": "0", "show_sidebar": "1", "sb_busy": "#c7b3b3", "sb_available": "#17a18c" }, "timeline": "modern", "datepicker": "top_calendar", "is_rtl": false, "app_config": { "clear_session": 1, "allow_switch_to_ada": 0, "predefined": { "provider": "2", "service": "10" } } });
                     </script>
                 </div>
             </div>
